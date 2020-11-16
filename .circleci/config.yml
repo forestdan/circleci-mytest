@@ -7,4 +7,7 @@ jobs:
       - image: circleci/python:3.8.6
     steps:
       - checkout
+      - run: python Test.py
       - run: python HelloCircleCi.py
+      - store_test_results:
+          path: test-results
