@@ -1,8 +1,15 @@
-version:2.1
+version: 2.1
+orbs: 
+  java: circleci/java@1.0.0
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8.6
+      - image: circleci/openjdk:9.0.1-jdk
     steps:
       - checkout
-      - run: python HelloCircleci.py
+      - run: mkdir jar
+      - run: javac HelloJavaInterface.jar
+      - run: jar cvf HelloJavaInterface.jar HelloJavaInterface.class
+      - run: cp HelloJavaInterface.jar jar/
+      - store_artifacts:
+          path: jar
