@@ -7,4 +7,4 @@ jobs:
       - image: circleci/python:3.8.6
     steps:
       - checkout
-      - run: python HelloCircleci.py
+      - run: python circleci-mytest/HelloCircleci.py
