@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: mkdir jar
-      - run: javac HelloJavaInterface.jar
+      - run: javac HelloJavaInterface.java
       - run: jar cvf HelloJavaInterface.jar HelloJavaInterface.class
       - run: cp HelloJavaInterface.jar jar/
       - store_artifacts:
