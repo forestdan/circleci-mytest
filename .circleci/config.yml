@@ -7,4 +7,4 @@ jobs:
       - image: circleci/python:3.8.6
     steps:
       - checkout
-      - run: python circleci-mytest/HelloCircleci.py
+      - run: pwd
