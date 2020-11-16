@@ -1,6 +1,4 @@
-version: 2.1
-orbs: 
-  java: circleci/java@1.0.0
+version: 2
 jobs:
   build:
     docker:
